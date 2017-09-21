@@ -14,5 +14,37 @@
 </header>
 
 @section('content')
+    <div class="container-fluid">
+        <h2>Editar post</h2>
+        <form method="POST" action="editar/{{ $post->id }}">
+            {{ csrf_field() }}
+            <div class="form-group">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" name="titulo">{{ $post->titulo }}
+            </div>
+            <div class="form-group">
+                <label for="subtitulo">Subtitulo</label>
+                <input type="text" class="form-control" name="subtitulo">{{ $post->subtitulo }}
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Contenido del post</label>
+                <textarea class="form-control" rows="3" name="descripcion">{{ $post->descripcion }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="usuario">Nombre de usuario</label>
+                <input type="text" class="form-control" name="usuario">{{ $post->usuario }}
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de publicación</label>
+                <input type="text" class="form-control" name="fecha">{{ $post->fecha }}
+            </div>
+            <div class="form-group">
+                <label for="fotoPost">Adjuntar foto</label>
+                <input type="file" name="fotoPost">{{ $post->fotoPost }}
+            </div>
+
+            <button type="submit" class="btn btn-default">Guardar cambios</button>
+        </form>
+    </div>
 
 @stop

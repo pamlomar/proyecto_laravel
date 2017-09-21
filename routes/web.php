@@ -23,6 +23,6 @@ Route::get('/contacto', 'ContactoController@contacto')->name('contacto');
 
 Route::match(['get', 'post'], '/new_post', 'NuevoPostController@crear')->name('new_post');
 
-Route::match(['get', 'post'], '/editar', 'EditarPostController@editar')->name('editar');
+Route::match(['get', 'post'], '/editar/{id}', 'EditarPostController@editar')->name('editar');
 
-
+Route::get('/eliminar/{id}', 'EliminarPostController@eliminar')->name('eliminar');

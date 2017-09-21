@@ -35,8 +35,8 @@
                     <a href="#">{{ $post->usuario }}</a>
                     on {{ $post->fecha }}
                 </p>
-                <a href="{{ route('editar') }}">Editar</a>
-                <a href="#">Eliminar</a>
+                <a href="editar/{{ $post->id }}">Editar</a>
+                <a href="eliminar/{{ $post->id }}">Eliminar</a>
             </div>
         </div>
     </div>
