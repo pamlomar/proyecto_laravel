@@ -14,17 +14,18 @@
 </header>
 
 @section('content')
+
     <div class="container-fluid">
         <h2>Editar post</h2>
-        <form method="POST" action="editar/{{ $post->id }}">
+        <form method="POST" action="{{ $post->id }}">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="titulo">Titulo</label>
-                <input type="text" class="form-control" name="titulo">{{ $post->titulo }}
+                <input type="text" class="form-control" name="titulo" value="{{ $post->titulo }}"/>
             </div>
             <div class="form-group">
                 <label for="subtitulo">Subtitulo</label>
-                <input type="text" class="form-control" name="subtitulo">{{ $post->subtitulo }}
+                <input type="text" class="form-control" name="subtitulo" value="{{ $post->subtitulo }}">
             </div>
             <div class="form-group">
                 <label for="descripcion">Contenido del post</label>
@@ -32,19 +33,16 @@
             </div>
             <div class="form-group">
                 <label for="usuario">Nombre de usuario</label>
-                <input type="text" class="form-control" name="usuario">{{ $post->usuario }}
+                <input type="text" class="form-control" name="usuario" value="{{ $post->usuario }}">
             </div>
             <div class="form-group">
                 <label for="fecha">Fecha de publicación</label>
-                <input type="text" class="form-control" name="fecha">{{ $post->fecha }}
-            </div>
-            <div class="form-group">
-                <label for="fotoPost">Adjuntar foto</label>
-                <input type="file" name="fotoPost">{{ $post->fotoPost }}
+                <input type="text" class="form-control" name="fecha" value="{{ $post->fecha }}">
             </div>
 
             <button type="submit" class="btn btn-default">Guardar cambios</button>
         </form>
     </div>
+
 
 @stop

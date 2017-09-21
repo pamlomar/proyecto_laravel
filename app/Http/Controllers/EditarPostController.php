@@ -10,24 +10,30 @@ class EditarPostController extends Controller
 
     public function editar(Request $request, $id)
     {
-        if ($request->isMethod('post'))
-        {
-        $post = Post::find($id);
+        if ($request->isMethod('post')) {
+            
+            $post = Post::find($id);
 
-        $titulo = $request->input('titulo');
-        $subtitulo = $request->input('subtitulo');
-        $descripcion = $request->input('descripcion');
-        $usuario = $request->input('usuario');
-        $fecha = $request->input('fecha');
-        $fotoPost = $request->input('fotoPost');
+            $titulo = $request->input('titulo');
+            $subtitulo = $request->input('subtitulo');
+            $descripcion = $request->input('descripcion');
+            $usuario = $request->input('usuario');
+            $fecha = $request->input('fecha');
 
-        $post -> save();
+            $post->titulo=$titulo;
+            $post->subtitulo=$subtitulo;
+            $post->descripcion=$descripcion;
+            $post->usuario=$usuario;
+            $post->fecha=$fecha;
 
-        return redirect()->route('home', ['post' => $id]);
-        }else
-        {
+            $post->save();
 
-            return view('editar');
+            return redirect()->route('home');
+        } else {
+
+            $post = Post::find($id);
+
+            return view('editar', ['post' => $post] );
         }
     }
 
