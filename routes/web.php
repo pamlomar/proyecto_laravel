@@ -26,3 +26,7 @@ Route::match(['get', 'post'], '/new_post', 'NuevoPostController@crear')->name('n
 Route::match(['get', 'post'], '/editar/{id}', 'EditarPostController@editar')->name('editar');
 
 Route::get('/eliminar/{id}', 'EliminarPostController@eliminar')->name('eliminar');
+
+Route::post('/home', 'BuscarPostsController@buscar')->name('buscar');
+
+Route::get('/postUsuario/{id}', 'ListarPostsUsuarioController@listar')->name('postsUsuario');

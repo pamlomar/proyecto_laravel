@@ -11,7 +11,7 @@ class EditarPostController extends Controller
     public function editar(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            
+
             $post = Post::find($id);
 
             $titulo = $request->input('titulo');

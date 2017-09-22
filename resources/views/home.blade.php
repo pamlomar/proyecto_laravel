@@ -14,12 +14,15 @@
 </header>
 
 @section('content')
-@foreach($posts as $post)
+
 
     <!-- Main Content -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
+
+                @foreach($posts as $post)
+
                 <div class="post-preview">
                     <a href="post/1">
                         <!-- Las rutas se ponen con route.  -->
@@ -32,16 +35,18 @@
                     </a>
                 </div>
                 <p class="post-meta">Posted by
-                    <a href="#">{{ $post->usuario }}</a>
+                    <a href="postsUsuario/{{ $post->usuario->usuario_id }}">{{ $post->usuario->usuario }}</a>
                     on {{ $post->fecha }}
                 </p>
                 <a href="editar/{{ $post->id }}">Editar</a>
                 <a href="eliminar/{{ $post->id }}">Eliminar</a>
+
+                @endforeach
+
             </div>
         </div>
     </div>
 
-@endforeach
 
 
-@stop
+@stop+

@@ -41,9 +41,6 @@
                     <a class="nav-link" href="{{ route('home') }}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Sobre mí</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">Mis posts</a>
                 </li>
                 <li class="nav-item">
@@ -52,8 +49,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('new_post') }}">Nuevo post</a>
                 </li>
+
             </ul>
         </div>
+            <form method="post" action="{{ route('buscar') }}">
+                {{ csrf_field() }}
+                <div class="input-group">
+                    <input type="text" class="form-control" name="cadena">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default" type="button">Buscar</button>
+                    </span>
+                </div>
+            </form>
+
     </div>
 </nav>
 
