@@ -31,8 +31,8 @@
             <textarea class="form-control" rows="3" name="descripcion"></textarea>
         </div>
         <div class="form-group">
-            <label for="usuario">Nombre de usuario</label>
-            <input type="text" class="form-control" name="usuario">
+            <label for="usuario_id">Nombre de usuario</label>
+            <input type="text" class="form-control" name="usuario_id">
         </div>
         <div class="form-group">
             <label for="fecha">Fecha de publicación</label>

@@ -23,8 +23,9 @@
 
                 @foreach($posts as $post)
 
+
                 <div class="post-preview">
-                    <a href="post/1">
+                    <a href="post/{{ $post->id }}">
                         <!-- Las rutas se ponen con route.  -->
                         <h2 class="post-title">
                             {{ $post->titulo }}
@@ -35,7 +36,7 @@
                     </a>
                 </div>
                 <p class="post-meta">Posted by
-                    <a href="postsUsuario/{{ $post->usuario->usuario_id }}">{{ $post->usuario->usuario }}</a>
+                    <a href="postUsuario/{{ $post->usuario_id }}">{{ $post->usuario_id }}</a>
                     on {{ $post->fecha }}
                 </p>
                 <a href="editar/{{ $post->id }}">Editar</a>
@@ -49,4 +50,4 @@
 
 
 
-@stop+
+@stop

@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\Post;
+use App\Model\Usuario;
 
 class ListarPostsUsuarioController extends Controller
 {

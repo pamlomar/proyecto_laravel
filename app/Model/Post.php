@@ -10,7 +10,7 @@ class Post extends Model
 
     public function usuarios()
     {
-        return $this->belongsTo('App\Model\Usuario');
+        return $this->hasOne('App\Model\Usuario');
     }
 
 }

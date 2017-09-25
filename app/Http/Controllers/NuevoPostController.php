@@ -16,7 +16,7 @@ class NuevoPostController extends Controller
         $titulo = $request->input('titulo');
         $subtitulo = $request->input('subtitulo');
         $descripcion = $request->input('descripcion');
-        $usuario = $request->input('usuario');
+        $usuario_id = $request->input('usuario_id');
         $fecha = $request->input('fecha');
         $fotoPost = $request->input('fotoPost');
 
@@ -25,7 +25,7 @@ class NuevoPostController extends Controller
         $post->titulo=$titulo;
         $post->subtitulo=$subtitulo;
         $post->descripcion=$descripcion;
-        $post->usuario=$usuario;
+        $post->usuario_id=$usuario_id;
         $post->fecha=$fecha;
         $post->fotoPost=$fotoPost;
 
