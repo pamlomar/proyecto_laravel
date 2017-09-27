@@ -1,0 +1,5 @@
+<?php
+
+return [
+    'texto'=> 'INGLES'
+];

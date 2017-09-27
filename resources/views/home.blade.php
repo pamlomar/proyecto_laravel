@@ -23,7 +23,6 @@
 
                 @foreach($posts as $post)
 
-
                 <div class="post-preview">
                     <a href="post/{{ $post->id }}">
                         <!-- Las rutas se ponen con route.  -->
@@ -49,7 +48,7 @@
                 @else
                     {{ $posts->links() }}
                 @endif
-                
+
             </div>
         </div>
     </div>

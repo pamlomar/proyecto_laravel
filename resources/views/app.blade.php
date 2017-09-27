@@ -30,16 +30,16 @@
 </head>
 
 <body>
-
+{{__('messages.texto')}}
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">ES</a>
+                <a class="nav-link" href="{{ route('idiomas' , ['locale'=> 'es']) }}">ES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">EN</a>
+                <a class="nav-link" href="{{ route('idiomas' , ['locale'=> 'en']) }}">EN</a>
             </li>
         </ul>
         <a class="navbar-brand" href="{{ route('home') }}">Start Bootstrap</a>
