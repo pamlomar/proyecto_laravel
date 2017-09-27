@@ -8,7 +8,7 @@ class ListarController extends Controller
 {
     public function listar()
     {
-        $posts = Post::all();
+        $posts = Post::simplePaginate(5);
         return view('home')->with('posts', $posts);
     }
 }

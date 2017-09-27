@@ -27,6 +27,10 @@ Route::match(['get', 'post'], '/editar/{id}', 'EditarPostController@editar')->na
 
 Route::get('/eliminar/{id}', 'EliminarPostController@eliminar')->name('eliminar');
 
-Route::post('/home', 'BuscarPostsController@buscar')->name('buscar');
+//Route::post('/home', 'BuscarPostsController@buscar')->name('buscar');
+
+Route::get('/buscar', 'BuscarPostsController@buscar')->name('buscar');
 
 Route::get('/postUsuario/{id}', 'ListarPostsUsuarioController@listar')->name('postsUsuario');
+
+Route::get('/idiomas/{locale}', 'ElegirIdiomaController@elegir')->name('idiomas');

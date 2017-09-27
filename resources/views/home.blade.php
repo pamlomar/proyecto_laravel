@@ -44,6 +44,12 @@
 
                 @endforeach
 
+                @if(isset($cadena))
+                    {{ $posts->appends(['cadena' => $cadena, 'cadena1' => $cadena1])->links() }}
+                @else
+                    {{ $posts->links() }}
+                @endif
+                
             </div>
         </div>
     </div>

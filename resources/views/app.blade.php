@@ -15,6 +15,7 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset("assets/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
 
+
     <!-- Custom fonts for this template -->
     <link href="{{asset("assets/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -22,6 +23,9 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset("assets/css/clean-blog.min.css")}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -30,6 +34,14 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">ES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">EN</a>
+            </li>
+        </ul>
         <a class="navbar-brand" href="{{ route('home') }}">Start Bootstrap</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
@@ -52,10 +64,11 @@
 
             </ul>
         </div>
-            <form method="post" action="{{ route('buscar') }}">
-                {{ csrf_field() }}
+            <form method="get" action="{{ route('buscar') }}">
+                <!--{{ csrf_field() }}-->
                 <div class="input-group">
-                    <input type="text" class="form-control" name="cadena">
+                    <input type="text" class="form-control" name="cadena" placeholder="titulo">
+                    <input type="text" class="form-control" name="cadena1" placeholder="descripcion">
                     <span class="input-group-btn">
                         <button type="submit" class="btn btn-default" type="button">Buscar</button>
                     </span>
