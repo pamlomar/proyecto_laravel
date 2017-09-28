@@ -34,3 +34,9 @@ Route::get('/buscar', 'BuscarPostsController@buscar')->name('buscar');
 Route::get('/postUsuario/{id}', 'ListarPostsUsuarioController@listar')->name('postsUsuario');
 
 Route::get('/idiomas/{locale}', 'ElegirIdiomaController@elegir')->name('idiomas');
+
+Route::match(['get', 'post'], '/registro_usuarios', 'NuevoUsuarioController@registrar')->name('registro_usuarios');
+
+Route::get('/bienvenida', 'MensajeBienvenidaController@ver')->name('bienvenida');
+
+Route::get('/error', 'MensajeErrorController@mensaje')->name('error');

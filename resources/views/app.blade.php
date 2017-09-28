@@ -12,7 +12,7 @@
 
     <title>Clean Blog - Start Bootstrap Theme</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS-->
     <link href="{{asset("assets/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
 
 
@@ -24,8 +24,10 @@
     <!-- Custom styles for this template -->
     <link href="{{asset("assets/css/clean-blog.min.css")}}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -61,6 +63,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('new_post') }}">Nuevo post</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('registro_usuarios') }}">Nuevo registro</a>
+                </li>
 
             </ul>
         </div>
@@ -83,11 +88,11 @@
 
     @yield('content')
 
-<!-- Pager -->
+<!-- Pager
 <div class="clearfix">
     <a class="btn btn-secondary float-right" href="#">Post antigüos &rarr;</a>
 </div>
-
+-->
 
 <!-- Footer -->
 <footer>

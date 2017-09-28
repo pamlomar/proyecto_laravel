@@ -1,16 +1,16 @@
 <?php
-namespace App\Model;
+   namespace App\Model;
 
-use Illuminate\Database\Eloquent\Model;
+   use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
-{
-    protected $table = 'post';
-    public $timestamps = false;
+   class Post extends Model
+   {
+       protected $table = 'post';
+       public $timestamps = false;
 
-    public function usuarios()
-    {
-        return $this->hasOne('App\Model\Usuario');
-    }
+       public function usuarios()
+       {
+           return $this->hasOne('App\Model\Usuario');
+       }
 
-}
+   }
